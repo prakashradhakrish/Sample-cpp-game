@@ -1,0 +1,20 @@
+<launch>
+
+	
+
+	<include file="$(find car_simulation)/launch/simulation.launch">
+		<arg name="gazebo_gui" value="false" />
+		<arg name="world_name" value="barrels.world" />
+		<arg name="rviz" value="true" />
+	</include>
+
+	<node pkg="turtlesim" type = "turtle_teleop_key" name = "teleop_key" required="true" launch-prefix="xterm -e" />
+
+	<node pkg="simple_control" type = "simple_control_node" name = "simple_control_node" launch-prefix="xterm -e">
+	<param name="throttle_param" value="0" />
+	<param name="steer_param" value="0" />
+	</node>
+	
+	<node pkg="rosbag" type="record"  name="teleop" args="-O $(find simple_control)/teleop.bag /turtle1/cmd_vel" />
+
+</launch>
