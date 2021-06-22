@@ -1,5 +1,5 @@
 
-**#List of files and description:#**
+**List of files and description:**
 
 This game strains your brains. You need to invade the Robots in the grid to reach the corners of the grid to win.
 Mind the Robots. It follows you everywhere !!
@@ -13,11 +13,11 @@ Mind the Robots. It follows you everywhere !!
 **game_algorithm.hpp** -  This 'hpp' file contains the algorithm to control the AI robot movement based on the user robot.
 
 
-**#syntax:#**
+**syntax:**
 
 **CMakeList.txt** - After excecuting the CMakeLists.txt using *make* command creates the game which can be excecuted by using *./game*
 
-**#Examples:#**
+**Examples:**
 
 *test_input_win.txt* - This file shows an example for winning the game
 *test_input_lose.txt* - This file shows an example for losing the game
